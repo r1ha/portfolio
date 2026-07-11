@@ -1,13 +1,17 @@
-import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { Navbar } from "./navbar/navbar";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterLink, RouterLinkActive, RouterOutlet, Navbar],
   templateUrl: './app.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './app.css',
 })
 export class App {
-  protected readonly title = signal('portfolio');
+  protected readonly navItems = [
+    { label: 'A propos', path: '/a-propos' },
+    { label: 'Expériences', path: '/experiences' },
+    { label: 'Compétences', path: '/competences' },
+  ];
 }

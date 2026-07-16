@@ -1,41 +1,32 @@
 import { Component } from '@angular/core';
-import {NgOptimizedImage} from '@angular/common';
 import { PersonalCard } from '../personal-card/personal-card';
+import { Timeline } from "../timeline/timeline";
 
 @Component({
   selector: 'app-about-section',
-  imports: [PersonalCard],
+  imports: [PersonalCard, Timeline],
   template: `
-  
-    <section class="section-panel" id="a-propos">
-      <div class="section-kicker">A propos</div>
-
+    <div class="flex flex-col items-center gap-5">
       <app-personal-card
-        [portraitPath]="'assets/portrait.jpg'"
+        [portraitPath]="'assets/pictures/portrait.jpg'"
+        [yourName]="'Erwan Achat'"
+        [yourJob]="'Software Engineer'"
+        [linkedInLink]="'https://www.linkedin.com/in/erwan-achat-069311233/'"
+        [email]="'erwan.achat@yahoo.com'"
       ></app-personal-card>
-      
-      <div class="section-grid">
-        <div class="section-copy">
-          <h2>Construire des expériences web lisibles, rapides et utiles.</h2>
-          <p>
-            Je conçois des interfaces portfolio qui vont droit au but: une histoire claire,
-            des contenus faciles à parcourir et une base technique propre pour évoluer.
-          </p>
-        </div>
 
-        <aside class="section-card">
-          <h3>Priorités</h3>
-          <ul class="bullet-list">
-            @for (point of focusPoints; track point) {
-              <li>{{ point }}</li>
-            }
-          </ul>
-        </aside>
+      <div class="flex flex-col">
+        <h2>Construire des expériences web lisibles, rapides et utiles.</h2>
+        <p>
+          Je conçois des interfaces portfolio qui vont droit au but: une histoire claire, des
+          contenus faciles à parcourir et une base technique propre pour évoluer.
+        </p>
       </div>
-    </section>
-    <div>
-        
+
+      <app-timeline></app-timeline>
     </div>
+
+
   `,
 })
 export class AboutSection {

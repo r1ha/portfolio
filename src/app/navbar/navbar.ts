@@ -9,7 +9,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 })
 export class Navbar {
     protected readonly navItems = [
-    { label: 'A propos', path: '/home' },
+    { label: 'À propos', path: '/home' },
     { label: 'Expériences', path: '/experiences' },
     { label: 'Compétences', path: '/skills' },
   ];

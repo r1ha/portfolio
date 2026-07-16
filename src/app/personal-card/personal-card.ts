@@ -9,4 +9,8 @@ import { Component, Input } from '@angular/core';
 })
 export class PersonalCard {
   @Input() portraitPath!: string;
+  @Input() yourName!: string;
+  @Input() yourJob!: string;
+  @Input() linkedInLink!: string;
+  @Input() email!: string;
 }

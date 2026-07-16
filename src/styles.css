@@ -1,3 +1,147 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+@plugin "daisyui";
+
+@theme {
+  /* Theme Colors */
+  --color-site-bg: rgb(225, 225, 218);
+  --color-site-text: #1f212a;
+
+  /* Portfolio Accent Colors (Bonus modern palette) */
+  --color-accent-primary: #3b418c;
+  --color-accent-muted: #f6f3ec;
+
+  /* Typography */
+  --font-site-heading: 'Manrope', system-ui, -apple-system, sans-serif;
+  --font-site-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@layer base {
+  /* Core Reset & Layout */
+  html,
+  body,
+  app-root {
+    background-color: var(--color-site-bg);
+    color: var(--color-site-text);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100vh;
+    font-family: var(--font-site-body);
+    line-height: 1.6; /* Increased slightly for better reading rhythm */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Portfolio Typography Rules */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-site-heading);
+    color: var(--color-site-text);
+    font-weight: 700;
+    letter-spacing: -0.02em; /* Gives modern fonts a premium, tight look */
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Custom typography scale for clear hierarchy */
+  h1 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+  h2 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+  h3 {
+    font-size: 1.35rem;
+    line-height: 1.4;
+  }
+
+  a {
+    font-family: var(--font-site-heading);
+    font-weight: 600;
+    color: var(--color-site-text);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+  }
+
+  a:hover {
+    opacity: 0.8;
+  }
+
+  p {
+    font-family: var(--font-site-body);
+    margin-bottom: 1.25rem;
+    opacity: 0.9; /* Slight opacity on body text looks softer and more modern than pure dark */
+  }
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 2px 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+}
+
+.glass-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8),
+    transparent,
+    rgba(255, 255, 255, 0.3)
+  );
+}
+
+.portfolio-card {
+    background-color: var(--color-accent-muted);
+    border: 1px solid rgba(31, 33, 42, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+      
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(31, 33, 42, 0.04);
+    }
+  }

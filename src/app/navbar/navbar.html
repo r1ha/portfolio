@@ -1,13 +1,13 @@
-<div class="flex-col absolute top center glass-card text-black text-center px-5 py-1 text-xl">
+<div class="fixed top-4 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 bg-gray-600/10 rounded-full backdrop-blur-md px-6 py-3 text-base md:text-lg">
 
     @for (item of navItems; track item.path) {
         <a
-          class="nav-link"
+          class="px-4 py-2"
           [routerLink]="item.path"
-          routerLinkActive="is-active"
+          routerLinkActive="text-black"
           [routerLinkActiveOptions]="{ exact: true }"
         >
           {{ item.label }}
         </a>
-      }
+    }
 </div>

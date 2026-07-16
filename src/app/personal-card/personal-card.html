@@ -1,8 +1,35 @@
-<div class="hover-3d">
+<div class="hover-3d my-12 mx-2 cursor-pointer">
   <!-- content -->
-  <figure class="max-w-100 rounded-2xl">
-    <img [ngSrc]="portraitPath" fill="none" alt="3D card" />
-  </figure>
+  <div class="card glass-card text-black rounded-xl w-96 h-48 bg-size-[4.95em_4.95em]">
+    <div class="card-body">
+      <div class="flex columns-2 gap-3">
+
+        <!-- first col: portrait -->
+        <img [ngSrc]="portraitPath" class="rounded-sm" width="128" height="128" alt="3D card" />
+
+        <!-- second col: textual information -->
+        <div class="">
+            <!-- profile -->
+          <h1 class="font-semibold text-lg">{{ yourName }}</h1>
+          <p>{{ yourJob }}</p>
+
+          <!-- contact info -->
+          <div class="flex-col">
+            <a [href]="linkedInLink" target="_blank" rel="noreferrer">
+              <img class="hover:" ngSrc="/assets/round_icons/linkedin.svg" width="24" height="24" alt="LinkedIn" />
+              <span>LinkedIn</span>
+            </a>
+
+            <a [href]="'mailto:' + email">
+              <img ngSrc="/assets/round_icons/mail.svg" width="24" height="24" alt="Mail" />
+              <span>{{ email }}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- 8 empty divs needed for the 3D effect -->
   <div></div>
   <div></div>

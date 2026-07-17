@@ -1,5 +1,6 @@
 import { NgOptimizedImage } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { PERSONAL_INFO } from '../info/personal-info';
 
 @Component({
   selector: 'app-personal-card',
@@ -8,9 +9,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './personal-card.css',
 })
 export class PersonalCard {
-  @Input() portraitPath!: string;
-  @Input() yourName!: string;
-  @Input() yourJob!: string;
-  @Input() linkedInLink!: string;
-  @Input() email!: string;
+  protected readonly personalInfo = inject(PERSONAL_INFO);
 }

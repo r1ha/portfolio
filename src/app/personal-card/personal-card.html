@@ -3,28 +3,24 @@
   <div class="card glass-card text-black rounded-xl w-96 h-48 bg-size-[4.95em_4.95em]">
     <div class="card-body">
       <div class="flex columns-2 gap-3">
-
         <!-- first col: portrait -->
-        <img [ngSrc]="portraitPath" class="rounded-sm" width="128" height="128" alt="3D card" />
+        <img
+          [ngSrc]="'assets/pictures/portrait.jpg'"
+          class="rounded-sm"
+          width="128"
+          height="128"
+          alt="3D card"
+        />
 
         <!-- second col: textual information -->
         <div class="">
-            <!-- profile -->
-          <h1 class="font-semibold text-lg">{{ yourName }}</h1>
-          <p>{{ yourJob }}</p>
+          <!-- profile -->
+          <h1 class="font-semibold text-lg">
+            {{ personalInfo.firstName + ` ` + personalInfo.lastName }}
+          </h1>
+          <p>{{ personalInfo.title }}</p>
 
-          <!-- contact info -->
-          <div class="flex-col">
-            <a [href]="linkedInLink" target="_blank" rel="noreferrer">
-              <img class="hover:" ngSrc="/assets/round_icons/linkedin.svg" width="24" height="24" alt="LinkedIn" />
-              <span>LinkedIn</span>
-            </a>
-
-            <a [href]="'mailto:' + email">
-              <img ngSrc="/assets/round_icons/mail.svg" width="24" height="24" alt="Mail" />
-              <span>{{ email }}</span>
-            </a>
-          </div>
+          <p>{{ personalInfo.location }}</p>
         </div>
       </div>
     </div>

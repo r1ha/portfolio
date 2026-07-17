@@ -1,10 +1,10 @@
-<div class="fixed top-4 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 bg-gray-600/10 rounded-full backdrop-blur-md px-6 py-3 text-base md:text-lg">
+<div class="fixed top-4 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 bg-gray-200/10 rounded-full backdrop-blur-md px-6 py-3 text-base md:text-lg">
 
     @for (item of navItems; track item.path) {
         <a
-          class="px-4 py-2"
+          class="px-4 py-2 text-gray-800 hover:text-black transition duration-400 ease-in-out"
           [routerLink]="item.path"
-          routerLinkActive="text-black"
+          routerLinkActive="text-black!"
           [routerLinkActiveOptions]="{ exact: true }"
         >
           {{ item.label }}

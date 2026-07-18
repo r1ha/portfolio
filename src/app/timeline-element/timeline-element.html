@@ -1,0 +1,6 @@
+<time class="flex flex-col font-mono italic">{{ year }}</time>
+@if (logo) {
+  <img [ngSrc]="logo" width="200" height="200" alt="Logo" class="max-h-14 w-auto mb-2" />
+}
+<div class="text-lg font-black whitespace-pre-line">{{ title }}</div>
+<p class="whitespace-pre-line">{{ summary }}</p>

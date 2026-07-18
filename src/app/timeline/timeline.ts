@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
+
+import { TIMELINE_SECTIONS } from '../info/timeline-info';
 
 @Component({
   selector: 'app-timeline',
@@ -7,4 +9,6 @@ import { NgOptimizedImage } from '@angular/common';
   templateUrl: './timeline.html',
   styleUrl: './timeline.css',
 })
-export class Timeline {}
+export class Timeline {
+  protected readonly sections = inject(TIMELINE_SECTIONS);
+}

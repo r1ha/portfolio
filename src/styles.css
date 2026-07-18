@@ -72,10 +72,6 @@
     font-weight: 600;
   }
 
-  a:hover {
-    opacity: 0.8;
-  }
-
   p {
     font-family: var(--font-site-body);
     margin-bottom: 1.25rem;

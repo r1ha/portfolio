@@ -1,169 +1,46 @@
 <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-  <li>
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-start mb-10 md:text-end">
-      <time class="font-mono italic">2026</time>
-      <img
-        [ngSrc]="'assets/organizations/polytech_white.svg'"
-        width="200"
-        height="200"
-        alt="Polytech Paris-Saclay"
-        class="w-1/2"
-      />
-      <div class="text-lg font-black">
-        Diplôme d'Ingénieur en Informatique <br />
-        et Ingénierie Mathématique
+  @for (section of sections; track section.title; let i = $index, first = $first, last = $last) {
+    <li>
+      @if (!first) {
+        <hr />
+      }
+      <div class="timeline-middle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="h-5 w-5"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+            clip-rule="evenodd"
+          />
+        </svg>
       </div>
-      <p>Polytech Paris-Saclay</p>
-    </div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
+      <div
+        [class.timeline-start]="i % 2 === 0"
+        [class.timeline-end]="i % 2 !== 0"
+        [class.mb-10]="i % 2 === 0"
+        [class.md:text-end]="i % 2 === 0"
+        [class.md:mb-10]="i % 2 !== 0"
       >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end md:mb-10">
-      <time class="font-mono italic">2026</time>
-      <img
-        [ngSrc]="'assets/organizations/takima_white.svg'"
-        width="200"
-        height="200"
-        alt="Takima"
-        class="w-1/3 p-5"
-      />
-      <div class="text-lg font-black">Consultant fullstack</div>
-      <p>
-        Takima (ESN) <br />
-        Stage de fin d'études (6 mois) en développement logiciel <br />
-        Durant mon stage de fin d'études, j'ai travaillé sur le projet de refonte du site web de
-        l'entreprise. J'ai participé à la conception et au développement de nouvelles
-        fonctionnalités, ainsi qu'à l'amélioration de l'expérience utilisateur. J'ai également
-        collaboré avec l'équipe marketing pour optimiser le référencement du site et augmenter sa
-        visibilité en ligne.
-      </p>
-    </div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-start mb-10 md:text-end">
-      <time class="font-mono italic">2025</time>
-      <img
-        [ngSrc]="'assets/organizations/sapienza_white.svg'"
-        width="200"
-        height="200"
-        alt="Sapienza Università di Roma"
-        class="w-1/2 p-5"
-      />
-      <div class="text-lg font-black">Semestre d'échange Erasmus</div>
-      <p>
-        Sapienza Università di Roma - Computer Science Master <br />
-        Enseignements suivis et validés: Advanced Machine Learning, Quantum Computing, Biometric
-        Systems, Automatic Verification of Intelligent Systems (Reinforcement Learning), Statistics
-      </p>
-    </div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-end md:mb-10">
-      <time class="font-mono italic">2025</time>
-      <img
-        [ngSrc]="'assets/organizations/inria_white.svg'"
-        width="200"
-        height="200"
-        alt="Inria"
-        class="w-1/3 p-5"
-      />
-      <div class="text-lg font-black">Ingénieur recherche en IHM</div>
-      <p>
-        Stage de recherche (5 mois) en visualisation de données <br>
-        - Traitement du signal (FFT) pour calculer le niveau sonore à partir d’ un microphone
-        analogique <br />
-        - Conception d’ un algorithme de TDoA pour estimer la direction du son dans l’espace <br />
-        - Simulation 3D et implémentation de visualisations des données <br />
-        - Communication en équipe exclusivement en anglais dans un setting international
-      </p>
-    </div>
-    <hr />
-  </li>
-  <li>
-    <hr />
-    <div class="timeline-middle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div class="timeline-start mb-10 md:text-end">
-      <time class="font-mono italic">2015</time>
-      <div class="text-lg font-black">Apple Watch</div>
-      <p>
-        The Apple Watch is a line of smartwatches produced by Apple Inc. It incorporates fitness
-        tracking, health-oriented capabilities, and wireless telecommunication, and integrates with
-        iOS and other Apple products and services
-      </p>
-    </div>
-  </li>
+        <time class="font-mono italic">{{ section.year }}</time>
+        @if (section.logo) {
+          <img
+            [ngSrc]="section.logo"
+            width="200"
+            height="200"
+            [alt]="section.logoAlt ?? ''"
+            [class]="section.logoClass ?? 'w-1/2'"
+          />
+        }
+        <div class="text-lg font-black whitespace-pre-line">{{ section.title }}</div>
+        <p class="whitespace-pre-line">{{ section.summary }}</p>
+      </div>
+      @if (!last) {
+        <hr />
+      }
+    </li>
+  }
 </ul>

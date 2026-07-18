@@ -1,0 +1,22 @@
+<section class="section-panel" id="experiences">
+
+  <h1>Projets</h1>
+  <p>
+    I've been working on a variety of projects, ranging from web applications to mobile apps. Here are some of the highlights:
+  </p>
+
+
+  <h1>Tech skills</h1>
+  <div class="skills-cloud">
+    @for (skill of skills; track skill.name) {
+      <div
+        class="skill-float"
+        [style.left.%]="skill.x"
+        [style.top.%]="skill.y"
+        [style.transform]="'rotate(' + skill.rotation + 'deg)'"
+      >
+        <app-skill-icon [name]="skill.name" [image]="skill.image" [xp]="skill.xp" />
+      </div>
+    }
+  </div>
+</section>

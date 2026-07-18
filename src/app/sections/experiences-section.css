@@ -1,0 +1,9 @@
+.skills-cloud {
+  position: relative;
+  height: 400px;
+  width: 100%;
+}
+
+.skill-float {
+  position: absolute;
+}

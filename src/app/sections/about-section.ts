@@ -3,16 +3,17 @@ import { PersonalCard } from '../personal-card/personal-card';
 import { Timeline } from '../timeline/timeline';
 import { PERSONAL_INFO } from '../info/personal-info';
 import { IconSet } from "../icon-set/icon-set";
+import { GlassCard } from '../glass-card/glass-card';
 
 @Component({
   selector: 'app-about-section',
-  imports: [PersonalCard, Timeline, IconSet],
+  imports: [PersonalCard, Timeline, IconSet, GlassCard],
   template: `
     <div class="flex flex-col items-center gap-5">
       <app-personal-card></app-personal-card>
 
       <div class="flex flex-col">
-        <h2>Construire des expériences web lisibles, rapides et utiles.</h2>
+        <h2>Bienvenue sur mon portfolio.</h2>
         <p>
           {{ personalInfo.bio }}
         </p>

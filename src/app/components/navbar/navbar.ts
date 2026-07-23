@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { NAV_SECTIONS } from '../../info/section-info';
 
 @Component({
   selector: 'app-navbar',
@@ -8,9 +9,5 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './navbar.css',
 })
 export class Navbar {
-    protected readonly navItems = [
-    { label: 'À propos', path: '/home' },
-    { label: 'Expérience', path: '/experiences' },
-    { label: 'Contact', path: '/contact' },
-  ];
+  protected readonly navSections = inject(NAV_SECTIONS);
 }

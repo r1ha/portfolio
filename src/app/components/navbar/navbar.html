@@ -1,6 +1,6 @@
 <div class="fixed top-4 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 bg-white/10 brightness-130 rounded-full backdrop-blur-xl px-6 py-3 text-base md:text-lg">
 
-    @for (item of navItems; track item.path) {
+    @for (item of navSections; track item.path) {
         <a
           class="px-4 py-2 text-gray-900 hover:text-black transition duration-400 ease-in-out text-center"
           [routerLink]="item.path"

@@ -3,6 +3,7 @@ import { provideRouter } from '@angular/router';
 
 import { personalInfo, PERSONAL_INFO } from './info/personal-info';
 import { timelineSections, TIMELINE_SECTIONS } from './info/timeline-info';
+import { navSections, NAV_SECTIONS } from './info/section-info';
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
@@ -11,5 +12,6 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     { provide: PERSONAL_INFO, useValue: personalInfo },
     { provide: TIMELINE_SECTIONS, useValue: timelineSections },
+    { provide: NAV_SECTIONS, useValue: navSections },
   ],
 };

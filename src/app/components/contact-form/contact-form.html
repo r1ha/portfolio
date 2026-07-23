@@ -1,0 +1,29 @@
+<p>contact-form works!</p>
+<!--
+
+Here is the contact form component,
+https://formspree.io/f/xaqrpezj
+Place this URL in the form's action attribute, set the method to POST, and add a name attribute to each input.
+
+For the style, contact form should be white, minimalistic and in a floating card with a soft shadow
+DaisyUI does not provide forms, so you can achieve this with tailwind or css
+
+See example of HTML code below
+
+-->
+
+<form
+  action="https://formspree.io/f/xaqrpezj"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>

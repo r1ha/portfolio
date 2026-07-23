@@ -6,7 +6,6 @@ export interface PersonalInfo {
   location: string;
   bio: string;
   title: string;
-  email: string;
   linkedIn: string;
   github: string;
 }
@@ -21,7 +20,6 @@ problématiques NLP en profondeur tout en gardant un ancrage solide en
 développement logiciel pour concrétiser mes idées.
   `,
   title: 'AI Research Engineer',
-  email: 'erwan.achat@yahoo.com',
   linkedIn: 'https://www.linkedin.com/in/erwan-achat-069311233/',
   github: 'https://github.com/r1ha/portfolio',
   location: 'Paris, France'

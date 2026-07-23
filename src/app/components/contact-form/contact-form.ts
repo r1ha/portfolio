@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-contact-form',
@@ -6,4 +6,18 @@ import { Component } from '@angular/core';
   templateUrl: './contact-form.html',
   styleUrl: './contact-form.css',
 })
-export class ContactForm {}
+export class ContactForm {
+
+  email = signal('');
+
+  emailChanged(event: Event): void {
+  const input = event.target as HTMLInputElement;
+  this.email.set(input.value);
+}
+
+
+  emailIsValid = (email: string): boolean => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+}

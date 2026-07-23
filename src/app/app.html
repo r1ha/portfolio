@@ -13,8 +13,8 @@
 
 
   <!-- Ton contenu principal sera parfaitement calé -->
-  <main class="w-full max-w-5xl">
-    <router-outlet></router-outlet>
+  <main class="w-full max-w-5xl" [@routeAnimations]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
   </main>
 </div>
 <app-footer></app-footer>

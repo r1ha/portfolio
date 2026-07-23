@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { PERSONAL_INFO } from '../info/personal-info';
+import { PERSONAL_INFO } from '../../info/personal-info';
 import {Icon} from "../icon/icon";
 
 @Component({

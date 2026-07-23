@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 
-import { TIMELINE_SECTIONS } from '../info/timeline-info';
+import { TIMELINE_SECTIONS } from '../../info/timeline-info';
 
 @Component({
   selector: 'app-timeline',

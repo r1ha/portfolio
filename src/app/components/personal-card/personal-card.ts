@@ -1,6 +1,6 @@
 import { NgOptimizedImage } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { PERSONAL_INFO } from '../info/personal-info';
+import { PERSONAL_INFO } from '../../info/personal-info';
 
 @Component({
   selector: 'app-personal-card',

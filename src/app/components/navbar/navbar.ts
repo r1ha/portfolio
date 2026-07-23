@@ -11,6 +11,6 @@ export class Navbar {
     protected readonly navItems = [
     { label: 'À propos', path: '/home' },
     { label: 'Expérience', path: '/experiences' },
-    { label: 'Plus', path: '/skills' },
+    { label: 'Contact', path: '/contact' },
   ];
 }

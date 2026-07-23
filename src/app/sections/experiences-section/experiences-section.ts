@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SkillIcon, SkillLevel } from '../skill-icon/skill-icon';
+import { SkillIcon, SkillLevel } from '../../components/skill-icon/skill-icon';
 
 @Component({
   selector: 'app-experiences-section',
@@ -8,7 +8,7 @@ import { SkillIcon, SkillLevel } from '../skill-icon/skill-icon';
   styleUrl: './experiences-section.css',
 })
 export class ExperiencesSection {
-  protected readonly experiences = [
+protected readonly experiences = [
     {
       period: '2024 - Aujourd\'hui',
       title: 'Développeur frontend',

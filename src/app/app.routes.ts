@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
 
-import { AboutSection } from './sections/about-section';
-import { ExperiencesSection } from './sections/experiences-section';
-import { SkillsSection } from './sections/skills-section';
+import { AboutSection } from './sections/about-section/about-section';
+import { ExperiencesSection } from './sections/experiences-section/experiences-section';
+import { ContactSection } from './sections/contact-section/contact-section';
 
 export const routes: Routes = [
 	{
@@ -19,8 +19,8 @@ export const routes: Routes = [
 		component: ExperiencesSection,
 	},
 	{
-		path: 'skills',
-		component: SkillsSection,
+		path: 'contact',
+		component: ContactSection,
 	},
 	{
 		path: '**',

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TIMELINE_SECTIONS } from '../info/timeline-info';
+import { TIMELINE_SECTIONS } from '../../info/timeline-info';
 import { Timeline } from './timeline';
 
 describe('Timeline', () => {

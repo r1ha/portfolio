@@ -54,7 +54,7 @@ export class ContactForm {
       issues.push('votre nom');
     }
     if (!this.emailIsValid(this.email())) {
-      issues.push('votre email');
+      issues.push('un email valide');
     }
     if (!this.messageIsValid(this.message())) {
       issues.push('votre message');
